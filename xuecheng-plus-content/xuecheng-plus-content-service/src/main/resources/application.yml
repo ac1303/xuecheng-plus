@@ -1,0 +1,11 @@
+# 应用名称
+spring:
+  application:
+    name: xuecheng-plus-content-service
+  datasource:
+    username: xc1010_content
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://39.101.141.70:3306/xc1010_content?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
+logging:
+  config: classpath:log4j2-dev.xml
