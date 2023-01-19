@@ -1,21 +1,51 @@
-server:
-  servlet:
-    context-path: /content
-  port: 63040
+#server:
+#  servlet:
+#    context-path: /content
+#  port: 63040
 #微服务配置
 spring:
   application:
     name: content-api
+#微服务配置
+  cloud:
+    nacos:
+      server-addr: 192.168.223.128:8848
+      discovery:
+        namespace: 51685faa-f12f-450b-8dff-b58c487f2388
+        group: xuecheng-plus-project
+      config:
+        server-addr: 192.168.223.128:8848
+        namespace: 51685faa-f12f-450b-8dff-b58c487f2388
+        group: xuecheng-plus-project
+        file-extension: yml
+        refresh-enabled: true
+        extension-configs:
+          - data-id: content-service-${spring.profiles.active}.yml
+            group: xuecheng-plus-project
+            refresh: true
+        shared-configs:
+          - data-id: swagger-${spring.profiles.active}.yml
+            group: xuecheng-plus-common
+            refresh: true
+          - data-id: logging-${spring.profiles.active}.yml
+            group: xuecheng-plus-common
+            refresh: true
 
-# 日志文件配置路径
-logging:
-  config: classpath:log4j2-dev.xml
+      #profiles默认为dev
+  profiles:
+    active: dev
 
 
-# swagger 文档配置
-swagger:
-  title: "学成在线内容管理系统"
-  description: "内容系统管理系统对课程相关信息进行业务管理数据"
-  base-package: com.xuecheng.content
-  enabled: true
-  version: 1.0.0
+## 日志文件配置路径
+#logging:
+#  config: classpath:log4j2-dev.xml
+
+
+
+## swagger 文档配置
+#swagger:
+#  title: "学成在线内容管理系统"
+#  description: "内容系统管理系统对课程相关信息进行业务管理数据"
+#  base-package: com.xuecheng.content
+#  enabled: true
+#  version: 1.0.0

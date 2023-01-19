@@ -1,0 +1,25 @@
+# 应用名称
+spring:
+  application:
+    name: content-service
+  cloud:
+    nacos:
+#      discovery:
+#        namespace: 51685faa-f12f-450b-8dff-b58c487f2388
+#        group: xuecheng-plus-project
+      config:
+        server-addr: 192.168.223.128:8848
+        namespace: 51685faa-f12f-450b-8dff-b58c487f2388
+        group: xuecheng-plus-project
+        file-extension: yml
+        refresh-enabled: true
+  #profiles默认为dev
+  profiles:
+    active: dev
+#  datasource:
+#    username: xc1010_content
+#    password: 123456
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://39.101.141.70:3306/xc1010_content?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
+#logging:
+#  config: classpath:log4j2-dev.xml
