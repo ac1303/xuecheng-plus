@@ -1,22 +1,17 @@
-#微服务配置
 spring:
   application:
-    name: media-api
+    name: auth-service
   cloud:
     nacos:
       server-addr: 192.168.223.128:8848
       discovery:
-        namespace: ${spring.profiles.namespace}
+        namespace: 51685faa-f12f-450b-8dff-b58c487f2388
         group: xuecheng-plus-project
       config:
-        namespace: ${spring.profiles.namespace}
+        namespace: 51685faa-f12f-450b-8dff-b58c487f2388
         group: xuecheng-plus-project
         file-extension: yaml
         refresh-enabled: true
-        extension-configs:
-          - data-id: media-service-${spring.profiles.active}.yaml
-            group: xuecheng-plus-project
-            refresh: true
         shared-configs:
           - data-id: swagger-${spring.profiles.active}.yaml
             group: xuecheng-plus-common
@@ -24,9 +19,6 @@ spring:
           - data-id: logging-${spring.profiles.active}.yaml
             group: xuecheng-plus-common
             refresh: true
+
   profiles:
     active: dev
-    namespace: 51685faa-f12f-450b-8dff-b58c487f2388
-logging:
-  level:
-    root: info
