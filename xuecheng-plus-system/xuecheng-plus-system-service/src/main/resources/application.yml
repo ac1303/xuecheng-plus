@@ -1,13 +1,13 @@
-spring:
-  application:
-    name: system-service
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://39.101.141.70:3306/xc1010_system?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
-    username: xc1010_content
-    password: 123456
-# 日志文件配置路径
-logging:
-  config: classpath:log4j2-dev.xml
+#spring:
+#  application:
+#    name: system-service
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://39.101.141.70:3306/xc1010_system?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
+#    username: xc1010_content
+#    password: 123456
+## 日志文件配置路径
+#logging:
+#  config: classpath:log4j2-dev.xml
 
 

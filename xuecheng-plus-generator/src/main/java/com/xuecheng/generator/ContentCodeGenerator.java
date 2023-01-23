@@ -33,12 +33,12 @@ public class ContentCodeGenerator {
 //			 "course_teacher",
 //			 "course_publish",
 //			 "course_publish_pre"
-			"course_category",
-			"course_base",
-			"course_market",
-			"teachplan",
-			"teachplan_media",
-			"course_teacher"
+//			"course_category",
+//			"course_base",
+//			"course_market",
+//			"teachplan",
+//			"teachplan_media",
+//			"course_teacher"
 	};
 
 	// TODO 默认生成entity，需要生成DTO修改此变量
